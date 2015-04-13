@@ -9,10 +9,6 @@ public class Page {
     public Page(WebDriver driver) {
         this.driver = driver;
     }
-    public boolean check(){
-        return true;
-    }
-
     public WebDriver getDriver() {
         return this.driver;
     }

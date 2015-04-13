@@ -25,9 +25,4 @@ public class HomePage extends Page {
     public  By getMESSAGES_BY() {
         return MESSAGES_BY;
     }
-
-
-    public String chekMessage(){
-        return driver.findElement(MESSAGES_BY).getText();
-    }
 }

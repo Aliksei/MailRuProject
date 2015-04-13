@@ -13,6 +13,7 @@ public class InboxTest {
     private WebDriver driver;
     private HomePage homePage;
 
+
     @BeforeTest
     public void init(){
         driver=MozillaBrowser.getInstacne();

@@ -8,7 +8,6 @@ public class Listener implements ISuiteListener, ITestListener, IConfigurationLi
 
     private static Logger LOG = Logger.getLogger(Listener.class);
 
-
     public void onTestStart(ITestResult iTestResult) {
         LOG.info("The "+iTestResult.getMethod().getMethodName()   +   "  is running  from  " +iTestResult.getTestClass().getName());
     }

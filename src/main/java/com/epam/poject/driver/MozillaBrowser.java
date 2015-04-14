@@ -10,7 +10,6 @@ public class MozillaBrowser {
     private MozillaBrowser() {
     }
 
-
     public static WebDriver getInstacne() {
         if (instacne==null) {
             instacne = new FirefoxDriver();

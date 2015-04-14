@@ -9,6 +9,7 @@ public class DriverthrouhgTheGuice extends AbstractModule{
     private WebDriver wd;
     private LoginPage loginPage;
 
+
     @Override
     protected void configure() {
         wd = MozillaBrowser.getInstacne();

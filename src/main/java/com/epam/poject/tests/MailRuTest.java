@@ -1,8 +1,8 @@
 package com.epam.poject.tests;
 
+import com.epam.poject.driver.webdriverFactory.DriverManagerFactory;
 import com.epam.poject.constants.MailConstants;
 import com.epam.poject.driver.DriverUtils;
-import com.epam.poject.driver.DriverthrouhgTheGuice;
 import com.epam.poject.pages.HomePage;
 import com.epam.poject.pages.LoginPage;
 import com.google.inject.Inject;
@@ -23,8 +23,10 @@ public class MailRuTest {
 
     @BeforeSuite
     public void inint(){
-        Injector injector= com.google.inject.Guice.createInjector(new DriverthrouhgTheGuice());
+        Injector injector= com.google.inject.Guice.createInjector(new DriverManagerFactory());
         injector.injectMembers(this);
+
+
     }
 
     @DataProvider(name = "loginInfo")

@@ -1,21 +1,31 @@
 package com.epam.poject.driver.webdriverFactory;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeManager extends DriverManager {
 
-    private static WebDriver instance ;
-
     static {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Aliksei_Tkachuk\\Downloads\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Aliksei_Tkachuk\\IdeaProjects\\MailRuProject\\chromedriver.exe");
     }
 
+
+    private  ThreadLocal<WebDriver> driver ;
+    private static ChromeManager instance = new ChromeManager();
+
+    private ChromeManager(){}
+
     @Override
-    public synchronized  WebDriver getDriver() {
-        if(instance==null){
-            instance = new ChromeDriver();
+    public  WebDriver getDriver() {
+        if(driver==null){
+            driver = new ThreadLocal<WebDriver>();
         }
+            driver.set(new ChromeDriver());
+        return driver.get();
+    }
+
+    public static ChromeManager getInstance() {
         return instance;
     }
 }

@@ -1,22 +1,18 @@
 package com.epam.poject.pages;
 
 import com.epam.poject.constants.MailConstants;
-import com.epam.poject.pages.yandex_elements.AuthorizationForm;
+import com.epam.poject.pages.blocks.AuthorizationForm;
 import org.openqa.selenium.WebDriver;
-import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
+import org.openqa.selenium.support.PageFactory;
+import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
 
 public class LoginPage extends Page {
 
-    private AuthorizationForm authorizationForm;
+    protected AuthorizationForm authorizationForm;
 
     public LoginPage(WebDriver driver){
         super(driver);
-        HtmlElementLoader.populatePageObject(this, driver);
-        try {
-            checkPage();
-        }catch (IllegalStateException e){
-            System.out.println("This is not the page you are expected");
-        }
+        PageFactory.initElements(new HtmlElementDecorator(driver), this);
     }
 
     @Override

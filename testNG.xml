@@ -10,7 +10,6 @@
     <test name="Mail Test">
         <classes>
             <class name="com.epam.poject.tests.MailRuTest" />
-
         </classes >
     </test>
 

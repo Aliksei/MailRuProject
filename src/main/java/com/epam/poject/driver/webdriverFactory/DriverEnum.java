@@ -1,13 +1,18 @@
 package com.epam.poject.driver.webdriverFactory;
 
+import com.epam.poject.exceptions.DriverEnumException;
+
 public enum  DriverEnum {
 
 
     FIREFOX("mozilla"),
-    CHROME("chrome");
+    CHROME("chrome"),
+    I_EXPLORER("explorer");
+
 
 
     private String type;
+
 
     DriverEnum(String requiredType) {
         type = requiredType;
@@ -17,14 +22,12 @@ public enum  DriverEnum {
         return type;
     }
 
-    public static DriverEnum defineEnumType(String type){
-
-        for (DriverEnum enum_case: DriverEnum.values()){
-            if(enum_case.getType().equals(type)){
-                return enum_case;
+    public static DriverEnum defineEnumType(String type) throws DriverEnumException {
+            for (DriverEnum enum_case : DriverEnum.values()) {
+                if (enum_case.getType().equals(type)) {
+                    return enum_case;
+                }
             }
-        }
-        return null;
+            throw new DriverEnumException("Cant define the type of browser");
     }
-
 }

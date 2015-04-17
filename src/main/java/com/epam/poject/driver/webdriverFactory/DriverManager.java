@@ -4,7 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 public  abstract class DriverManager {
 
-    public abstract  WebDriver getDriver();
-
+    public WebDriver getDriver(){
+        return null;
+    }
 
 }
+
+

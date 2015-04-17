@@ -9,7 +9,6 @@ public class FireFoxManager extends DriverManager {
     private  ThreadLocal<WebDriver> driver ;
     private static FireFoxManager instance = new FireFoxManager();
 
-
     private FireFoxManager(){}
 
 

@@ -23,14 +23,11 @@ public class MailRuTest {
     @Inject
     protected LoginPage loginPage;
 
-
     @BeforeSuite
     public void inint(){
         LOG.info("Injecting elements");
         Injector injector= com.google.inject.Guice.createInjector(new DriverManagerFactory());
         injector.injectMembers(this);
-
-
     }
 
     @DataProvider(name = "loginInfo")

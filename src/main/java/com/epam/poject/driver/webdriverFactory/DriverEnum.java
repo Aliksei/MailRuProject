@@ -4,12 +4,9 @@ import com.epam.poject.exceptions.DriverEnumException;
 
 public enum  DriverEnum {
 
-
     FIREFOX("mozilla"),
     CHROME("chrome"),
     I_EXPLORER("explorer");
-
-
 
     private String type;
 

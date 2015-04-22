@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChromeManager extends DriverManager {
 
     static {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Aliksei_Tkachuk\\IdeaProjects\\MailRuProject\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
     }
 
 
